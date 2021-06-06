@@ -1,0 +1,184 @@
+.article
+  padding-left vh(88)
+  padding-right vh(88)
+
+  @media $tovw
+    padding-left vw(88)
+    padding-right vw(88)
+
+  @media $mobile
+    padding 0
+
+  &__title
+    text-align center
+    ff 'Rotondac'
+    font-weight 700
+    font-size vh(33)
+    line-height vh(42)
+    margin-bottom vh(77)
+    color #A70000
+    @media $tovw
+      font-size vw(33)
+      line-height vw(42)
+      margin-bottom vw(77)
+      
+    @media $mobile
+      font-size vm(26)
+      line-height vm(39)
+      margin-bottom vm(32)
+
+  &__inner
+    display flex
+    justify-content space-between
+
+    @media $mobile
+      flex-direction column
+
+  &__item
+    width vh(444)
+    cursor pointer
+
+    @media $tovw
+      width vw(444)
+    
+    @media $mobile
+      width vm(289)
+      padding-right vm(42)
+      padding-left vm(42)
+    
+    &:first-child
+      .article__box-title
+        width vh(391)
+        @media $tovw
+          width vw(391)
+        @media $mobile
+          width 100%
+
+  &__linke
+    width 100%
+    height vh(252)
+    pos relative
+    
+    @media $tovw
+      height vw(252)
+
+    @media $mobile
+      height vm(164)
+
+    &::before
+      background-color #FFF2D8
+      filter: blur(14px);
+      pos absolute
+      border-radius vh(40)
+      content ''
+      min-width 100%
+      min-height 100%
+      left vh(-9)
+      right vh(-9)
+      bottom vh(-9)
+      top vh(-9)
+      opacity 0
+      transition opacity .4s
+      
+      @media $tovw
+        border-radius vw(40)
+        left vw(-9)
+        right vw(-9)
+        bottom vw(-9)
+        top vw(-9)
+
+      @media $mobile
+        display none
+
+
+  &__img
+    object-fit cover
+    width 100%
+    height 100%
+    border-radius vh(40)
+    pos relative
+    z-index 1
+    @media $tovw
+      border-radius vw(40)
+    @media $mobile
+      border-radius vm(40)
+
+  &__box
+    margin-top vh(25)
+    padding-left vh(26)
+
+    @media $tovw
+      margin-top vw(25)
+      padding-left vw(26)
+
+    @media $mobile
+      mt vm(25)
+      padding 0
+
+    &-title
+      font-size vh(22)
+      line-height 127%
+      color #79431F
+      width vh(416)
+      text-decoration underline
+      text-decoration-color transparent
+      transition .4s text-decoration-color
+
+      @media $tovw
+        width vw(416)
+        font-size vw(22)
+
+      @media $mobile
+        width 100%
+        font-size vm(18)
+
+    &-text
+      font-size vh(16)
+      line-height vh(20)
+      color #D85C0B
+      margin-top vh(12)
+      padding-bottom vh(28)
+      width vh(388)
+      pos relative
+      text-decoration underline
+      text-decoration-color transparent
+      transition .4s text-decoration-color
+
+      @media $tovw
+        font-size vw(16)  
+        margin-top vw(12)
+        padding-bottom vw(28)
+        width vw(388)
+
+      @media $mobile
+        width 100%
+        font-size vm(16)
+        line-height 130%
+        pb vm(28)
+
+      &::before
+        content ''
+        pos absolute 
+        bottom 0
+        left 0
+        width vh(29)
+        height vh(12)
+        background-size contain
+        background-image url("data:image/svg+xml,%3Csvg viewBox='0 0 29 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.5303 6.53033C28.8232 6.23744 28.8232 5.76257 28.5303 5.46967L23.7574 0.696701C23.4645 0.403808 22.9896 0.403808 22.6967 0.696701C22.4038 0.989595 22.4038 1.46447 22.6967 1.75736L26.9393 6L22.6967 10.2426C22.4038 10.5355 22.4038 11.0104 22.6967 11.3033C22.9896 11.5962 23.4645 11.5962 23.7574 11.3033L28.5303 6.53033ZM-6.55671e-08 6.75L28 6.75L28 5.25L6.55671e-08 5.25L-6.55671e-08 6.75Z' fill='%23D85C0B'/%3E%3C/svg%3E%0A")
+        animation arrowArticle 1.3s linear infinite
+
+        @media $tovw
+          width vw(29)
+          height vw(12)
+
+        @media $mobile
+          width vm(29)
+          height vm(12)
+          
+@keyframes arrowArticle 
+	0% 
+		transform translateX(0px)
+	50%
+		transform translateX(10px)
+	100%
+		transform translateX(0px)

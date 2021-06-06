@@ -1,0 +1,59 @@
+.header
+	&__inner
+		display flex
+		justify-content space-between
+		align-items center
+		padding 0 vh(49) vh(10) vh(45)
+		pos relative
+		z-index 2
+
+		@media $tovw
+			padding 0 vw(49) vw(10px) vw(45)
+
+		@media $mobile
+			padding 0 vm(19) vm(10) vm(14)
+
+	&__link
+		font-size 0
+
+		img 
+			object-fit cover
+
+	&__logo
+		width vh(132)
+
+		@media $tovw
+			width vw(132)
+		
+		@media $mobile
+			width vm(76)
+
+	&__img
+		width vh(137)
+		height vh(37)
+		margin-bottom vh(16)
+		
+		@media $tovw
+			width vw(137)
+			height vw(37)
+			margin-bottom vw(16)
+
+		@media $mobile
+			width vm(85)
+			height vm(23)
+			margin-bottom vm(16)
+
+	&__special
+		color #CE6D3D;
+		font-size vh(13)
+		letter-spacing 0.1em
+		margin-bottom vh(11)
+		pl vh(10)
+
+		@media $tovw
+			font-size vw(13)
+			margin-bottom vw(11)
+			pl vw(10)
+
+		@media $mobile
+			display none

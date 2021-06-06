@@ -1,0 +1,184 @@
+.footer
+  pos absolute 
+  bottom 0
+  width 100%
+  padding-left vh(56)
+  padding-bottom vh(7)
+
+  @media $tovw
+    padding-left vw(56)
+    padding-bottom vw(7)
+
+  @media $mobile
+    pl vm(11)
+    pb vm(5)
+    pos static
+
+  &__copy
+    display none
+    font-weight 300
+    c #E77E40
+    font-size vh(50)
+    margin-bottom vh(96)
+    text-align center
+    pos relative
+    z-index 3
+
+    @media $tovw
+      font-size vw(50)
+      margin-bottom vw(96)
+
+    @media $mobile
+      display block
+      font-size vm(16)
+      mb 0
+      text-align left
+      letter-spacing -0.05em
+      line-height 72.69%
+      pr vm(11)
+
+  &__inner
+    display flex
+    align-items flex-end
+    justify-content space-between
+    padding-right vh(42)
+    @media $tovw
+      padding-right vw(42)
+
+    @media $mobile
+      pr vm(12)
+      mb vm(10)
+      padding-left vm(9)
+
+  &__box
+    margin-bottom vh(27)
+    text-align right
+    display flex
+    align-items flex-end
+
+    @media $tovw
+      margin-bottom vw(27)
+
+    @media $mobile
+      flex-direction column
+      mb 0
+
+    &-img
+      object-fit cover 
+      width vh(141)
+      @media $tovw
+        width vw(141)
+      @media $mobile
+        width vm(74) 
+
+  &__info
+    font-size vh(21)
+    line-height 130%
+    color #F85500
+    font-weight 700
+    ff 'Rotondac'
+    width vh(160)
+    margin-right vh(13)
+    padding-bottom vh(9)
+    z-index 1
+
+    @media $tovw
+      width vw(160)
+      font-size vw(21)
+      margin-right vw(13)
+      padding-bottom vw(9)
+
+    @media $mobile
+      font-size vm(12)
+      width auto
+      mr vm(12)
+      mt vm(12)
+
+  &__number
+    font-size vh(10)
+    line-height 136%
+    color #E77E40
+    text-align right
+    padding-right vh(15)
+    pos relative 
+    z-index 3
+      
+    @media $tovw
+      padding-right vw(15)
+      font-size vw(10)
+
+    @media $mobile
+      font-size vm(8)
+      pr vm(11)
+
+  &.basicPage
+    .social
+      @media $mobile
+        display none
+    
+    .footer__box
+      @media $mobile
+        ml auto
+
+    .footer__info
+      @media $mobile
+        width vm(100)
+
+  &__supradin
+    z-index 3
+
+  &__links
+    display flex
+    width vh(318)
+    height vh(199)
+    @media $tovw
+      height vw(199)
+      width vw(318)
+    @media $mobile
+      display none
+    
+    .footer__link
+      height 100%
+      width 50%
+
+  &__supradin
+    @media $mobile
+      order -1
+
+
+.edit
+  &::before
+    display none
+  @media $mobile
+    &::before
+      content ''
+      display block
+      width 100%
+      height vm(226)
+      background-size cover
+      background-repeat no-repeat
+      pos absolute
+      z-index 3
+      bottom 0
+      left 0
+      right 0
+      background-image url('~@/assets/img/footer/bg-mob-before.png')
+
+.footer.edit
+  padding-left vh(78)
+  @media $tovw
+
+    padding-left vw(78)
+  
+  @media $mobile
+    pl vm(11)
+    
+  .footer__copy
+    display block
+  .footer__inner
+    display none
+    @media $mobile
+      display flex
+      pos relative
+      z-index 4
+      

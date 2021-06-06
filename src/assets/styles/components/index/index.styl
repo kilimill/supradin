@@ -1,0 +1,154 @@
+.index
+  padding-top vh(68)
+  width 100%
+
+  @media $tovw
+    padding-top vw(68)
+
+  @media $mobile
+    padding-top vm(45)
+    padding-bottom vm(50)
+    // min-height calc(100vh - 186vh)
+    min-height vm(550)
+
+  &__content
+    pos relative
+    z-index 2
+    
+    @media $mobile
+      padding 0 vm(23)
+
+  &__title
+    margin-left vh(292)
+    width vh(1117)
+    height vh(170)
+    object-fit cover
+
+    @media $tovw
+      margin-left vw(292)
+      width vw(1117)
+      height vw(170)
+
+    @media $mobile
+      margin 0
+      width vm(328)
+      height vm(50)
+
+  &__text
+    margin-top vh(47)
+    margin-left vh(638)
+    width vh(682)
+    font-size vh(20)
+    line-height 136.69%
+    color #660707
+    pos relative
+    z-index 11
+
+    @media $tovw
+      margin-top vw(47)
+      margin-left vw(638)
+      width vw(682)
+      font-size vw(20)
+
+    @media $mobile
+      mt vm(14)
+      ml 0
+      width 100%
+      font-size vm(16)
+      line-height 129.69%
+
+  &__img
+    pos absolute 
+    bottom 0
+    left 0
+    z-index 1
+    object-fit cover
+    @media $mobile
+      margin-left 0 !important
+      left 0
+
+    &-one
+      margin-left vh(54)
+      width vh(600)
+      
+      @media $tovw
+        margin-left vw(54)
+        width vw(600)
+
+      @media $mobile
+        width vm(300)
+
+    &-two
+      width vh(750)
+      margin-left vh(77)
+
+      @media $tovw
+        margin-left vw(77)
+        width vw(750)
+
+      @media $mobile
+        width vm(378)
+
+    &-three
+      width vh(820)
+      margin-left 0
+
+      @media $tovw
+        width vw(820)
+
+      @media $mobile
+        width vm(378)
+        
+    &-four
+      width vh(581)
+      margin-left vh(32)
+
+      @media $tovw
+        margin-left vw(32)
+        width vw(581)
+
+      @media $mobile
+        width vm(313)
+
+  &__start
+    margin-top vh(31)
+    margin-left vh(795)
+
+    @media $tovw
+      margin-top vw(31)
+      margin-left vw(795)
+
+    @media $mobile
+      mt vm(27)
+      margin-left 43% 
+
+    &:hover
+      .index-start-arrow
+        path
+          fill #FF8300
+
+    &-text
+      font-size vh(22)
+
+      @media $tovw
+        font-size vw(22)
+
+      @media $mobile
+        font-size vm(18)
+
+    .index-start-arrow
+      width vh(46)
+      height vh(16)
+      right vh(37)
+      path
+        fill #FEC9A8
+      
+      @media $tovw
+        width vw(47)
+        height vw(16)
+        right vw(37)
+
+      @media $mobile
+        width vm(36)
+        height vm(13)
+        right vm(30)

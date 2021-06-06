@@ -1,0 +1,120 @@
+.test__question
+  opacity 0
+  pointer-events auto
+  transform translateY(50%)
+  transition opacity .3s, transform .3s
+
+  &:hover
+    @media $desktop
+      &::before
+        opacity 1
+      .test__link
+        animation 1.3s linear 0s infinite buble
+        &::before
+          opacity 1
+        
+  &--one
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow: 0px 0px 10px #FFAFE6
+        filter: drop-shadow(0px 0px 10px #FFAFE6)
+        .test__link
+          box-shadow: 0px 0px 10px #FFAFE6
+
+  &--two
+    transition-delay .2s
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow 0px 0px 10px #8EE7FF
+        filter drop-shadow(0px 0px 10px #8EE7FF)
+        .test__link
+          box-shadow 0px 0px 10px #8EE7FF
+        
+  &--three
+    transition-delay .4s
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow 0px 0px 10px #FDC96A
+        filter drop-shadow(0px 0px 12px #FDC96A)
+        .test__link
+          box-shadow 0px 0px 10px #FDC96A
+        
+  &--four
+    transition-delay .6s
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow: 0px 0px 10px #FF876A
+        filter: drop-shadow(0px 0px 10px #FF876A)
+        .test__link
+          box-shadow: 0px 0px 10px #FF876A
+        
+  &--five
+    transition-delay .8s
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow: 0px 0px 10px #DDFBC0
+        filter: drop-shadow(0px 0px 16px #DDFBC0)
+        .test__link
+          box-shadow: 0px 0px 10px #DDFBC0
+        
+  &--six
+    transition-delay 1s
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow: 0px 0px 10px #FF876A
+        filter: drop-shadow(0px 0px 10px #FF876A)
+        .test__link
+          box-shadow: 0px 0px 10px #FF876A
+        
+  &--seven
+    transition-delay 1.2s
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow: 0px 0px 10px #FDB4FF
+        filter: drop-shadow(0px 0px 13px #FDB4FF)
+        .test__link
+          box-shadow: 0px 0px 10px #FDB4FF
+        
+  &--eight
+    transition-delay 1.4s
+    &:hover
+      @media $desktop
+        &::before
+          box-shadow: 0px 0px 10px #FFC29F
+        .test__link
+          box-shadow: 0px 0px 10px #FFC29F
+        
+
+.test[loaded]
+  .test__question
+    opacity 1
+    transform translateY(0)
+    &.anim-question
+      opacity 0
+      transform scale(1.05)
+
+.test.anim
+  .test__question
+    transition-delay 0s
+
+.test.resetAnim
+  .test__question
+    opacity 0
+    transform translateY(50%)
+
+@keyframes buble{
+  0% {
+    transform scale(1)
+  } 50% {
+    transform scale(1.05)
+  } 100% {
+    transform scale(1)
+  }
+}
